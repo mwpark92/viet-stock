@@ -7,9 +7,9 @@
 <script>
 export default {
   created() {
-    this.$http.get("/api/company").then(resp => {
-      console.log(resp);
-    });
+    // this.$http.get("/api/company").then(resp => {
+    //   console.log(resp);
+    // });
   }
 };
 </script>

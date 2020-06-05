@@ -12,14 +12,15 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/api/company', function (req, res, next) {
+  const ticker = req.query.ticker.toUpperCase();
+
   c.direct({
-    uri: 'http://www.google.com/',
+    uri: `http://ra.vcsc.com.vn/Company/Financial?lang=en-US&ticker=${ticker}`,
     callback: function (error, response) {
       if (error) {
-        console.log('erro111r');
-        res.send('error')
+        res.send('error');
       } else {
-        res.send(response)
+        res.send(response);
       }
     }
   });
