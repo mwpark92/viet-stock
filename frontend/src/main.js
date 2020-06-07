@@ -4,9 +4,12 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import vuetify from './plugins/vuetify';
+import Buefy from 'buefy';
+import 'buefy/dist/buefy.css';
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios;
+Vue.use(Buefy);
 
 new Vue({
   router,
