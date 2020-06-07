@@ -20,7 +20,7 @@ router.get('/api/company', function (req, res, next) {
   //http://ra.vcsc.com.vn/Financial/PV_CashFlowStatement?ticker=mch&filter=0&unit=1000000000
 
   c.direct({
-    uri: `http://ra.vcsc.com.vn/Financial/PV_Index?lang=en-US&ticker=${ticker}&filter=0&unit=1000000`,
+    uri: `http://ra.vcsc.com.vn/Financial/PV_Index?lang=en-US&ticker=${ticker}&filter=0&unit=1000000000`,
     callback: function (error, response) {
       if (error) {
         res.send('error');
